@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import { Layout } from 'antd';
+import PostTable from './components/PostTable';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const { Header, Content } = Layout;
+
+const App = () => (
+  <Layout>
+    <Header>
+      <h1 style={{ color: 'white' }}>Posts with Filters and Pagination</h1>
+    </Header>
+    <Content style={{ padding: '20px' }}>
+      <PostTable />
+    </Content>
+  </Layout>
+);
 
 export default App;
